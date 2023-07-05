@@ -7,29 +7,6 @@ route:
   # firing shortly after another are batched together on the first
   # notification.
   group_wait: 10s
-
-  # When the first notification was sent, wait 'group_interval' to send a batch
-fgb
-      continue: true
-
-receivers:
-  - name: "hivepro-internal-slack"
-    slack_configs:
-      - api_url: 'https://hooks.slack.com/services/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'
-        send_resolved: true
-        channel: 'hivepro-centralized-monitoring-alerts'
-        icon_url: https://prometheus.io/assets/prometheus_logo_grey.svg
-        title: |-
-          [{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}] {{ .CommonLabels.alertname }} for {{ .CommonLabels.job }}
-          {{- if gt (len .CommonLabels) (len .GroupLabels) -}}
-            {{" "}}(
-            {{- with .CommonLabels.Remove .GroupLabels.Names }}
-              {{- range $index, $label := .SortedPairs -}}
-                {{ if $index }}, {{ end }}
-                {{- $label.Name }}="{{ $label.Value -}}"
-              {{- end }}
-            {{- end -}}
-            )
           {{- end }}
         text: >-
           {{ range .Alerts -}}
