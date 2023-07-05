@@ -9,13 +9,7 @@ route:
   group_wait: 10s
 
   # When the first notification was sent, wait 'group_interval' to send a batch
-  # of new aleand can
-  # overwritten on each.
-  routes:
-    - receiver: "hivepro-internal-slack"
-      group_wait: 10s
-      match_re:
-        severity: Critical|High|Medium|Low|warning|info
+fgbfdbfdgbMedium|Low|warning|info
       continue: true
 
     - receiver: "hivepro-external-slack"
