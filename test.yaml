@@ -9,19 +9,7 @@ route:
   group_wait: 10s
 
   # When the first notification was sent, wait 'group_interval' to send a batch
-fgbfdbfdgbMedium|Low|warning|info
-      continue: true
-
-    - receiver: "hivepro-external-slack"
-      group_wait: 10s
-      match_re:
-        severity: Critical|High
-      continue: true
-    
-    - receiver: "pager"
-      group_wait: 10s
-      match_re:
-        severity: Critical|High|Medium
+fgb
       continue: true
 
 receivers:
