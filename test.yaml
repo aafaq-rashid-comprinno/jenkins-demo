@@ -9,17 +9,7 @@ route:
   group_wait: 10s
 
   # When the first notification was sent, wait 'group_interval' to send a batch
-  # of new alerts that started firing for that group.
-  group_interval: 30s
-
-  # If an alert has successfully been sent, wait 'repeat_interval' to
-  # resend them.
-  repeat_interval: 30m
-
-  # A default receiver
-  receiver: "hivepro-internal-slack"
-
-  # All the above attributes are inherited by all child routes and can
+  # of new aleand can
   # overwritten on each.
   routes:
     - receiver: "hivepro-internal-slack"
