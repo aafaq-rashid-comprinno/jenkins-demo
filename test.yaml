@@ -10,7 +10,7 @@ route:
           {{- end }}
         text: >-wswfsrgfgergwefdvdefbdsv dsv
           {{ range .Alerts -}}
-          *Alert:* {{ .Annotations.title }}{{ if .Labelsqqqqqq1q2q22121qqw21q21qqw1q2qw.severity }} - `{{ .Labels.severity }}`{{ end }}
+          *Alert:* {{ .Annotations.title }}{{ io;uoyuolyuo;yuo;yio;yio/ypi/yopy;ip;ipyf .Labelsqqqqqq1q2q22121qqw21q21qqw1q2qw.severity }} - `{{ .Labels.severity }}`{{ end }}
           *Description:* {{ .Annotations.description }}
           *Details:*
             {{ range .Labels.SortedPairs }} • *{{ .Name }}:* `{{ .Value }}`
