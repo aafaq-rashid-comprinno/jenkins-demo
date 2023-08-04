@@ -8,7 +8,7 @@ route:
   # notification.
   group_wait: 10s
           {{- end }}
-        text: >-
+        text: >-wswfsrgfgergwefdvdefbdsv dsv
           {{ range .Alerts -}}
           *Alert:* {{ .Annotations.title }}{{ if .Labels.severity }} - `{{ .Labels.severity }}`{{ end }}
           *Description:* {{ .Annotations.description }}
