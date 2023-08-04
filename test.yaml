@@ -15,7 +15,7 @@ route:
           *Details:*
             {{ range .Labels.SortedPairs }} • *{{ .Name }}:* `{{ .Value }}`
             {{ end }}
-          {{ end }}
+          {{ end }}cxsdvsdsdsdvsdvsdvdvsdvsdvsdvsdv
 
   - name: "hivepro-external-slack"
     slack_configs:
